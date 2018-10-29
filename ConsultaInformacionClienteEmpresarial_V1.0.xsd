@@ -8,6 +8,14 @@
 	<!--Inicio Operaciones)-->
 	<xsd:element ibmSchExtn:docRoot="true" name="consultarInformacionGeneral" type="tns:ConsultarInformacionGeneral">
 	</xsd:element>
+	
+	<xsd:element ibmSchExtn:docRoot="true" name="consultarRelacionGrupoEconomicoRequest" type="tns:ConsultarRelacionGrupoEconomicoRequest">
+	</xsd:element>
+	
+	<xsd:element ibmSchExtn:docRoot="true" name="consultarRelacionGrupoEconomicoResponse" type="tns:ConsultarRelacionGrupoEconomicoResponse">
+	</xsd:element>
+	
+	
 
 	<xsd:element ibmSchExtn:docRoot="true" name="consultarInformacionGeneralResponse" type="tns:ConsultarInformacionGeneralResponse">
 	</xsd:element>
@@ -58,12 +66,21 @@
 	</xsd:complexType>
 	
 	
-	<xsd:complexType name="ConsultarRelacionGrupoEconomico">
+	<xsd:complexType name="ConsultarRelacionGrupoEconomicoRequest">
 		<xsd:sequence>
-
 			<xsd:element maxOccurs="1" minOccurs="1" name="identificacionCliente" type="tns:DatosIdentificacion"/>
 		</xsd:sequence>
 	</xsd:complexType>
+	
+	
+	<xsd:complexType name="ConsultarRelacionGrupoEconomicoResponse">
+		<xsd:sequence>
+			<xsd:element name="identificacionCliente" type="tns:ConsultarRelacionGrupoEconomicoRequest" minOccurs="1" maxOccurs="1"></xsd:element>			
+			<xsd:element name="nombreEmpresa" type="xsd:string"  maxOccurs="1" minOccurs="1"	 />
+			<xsd:element name="estado" type="xsd:boolean"	minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
 
 	<xsd:complexType name="ConsultarInformacionGeneralResponse">
 		<xsd:sequence>

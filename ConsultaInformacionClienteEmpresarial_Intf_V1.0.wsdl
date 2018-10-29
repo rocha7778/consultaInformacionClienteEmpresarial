@@ -17,11 +17,28 @@
 		<wsdl:part element="tns:consultarInformacionGeneral" name="parameters"/>
 		<wsdl:part element="mf:requestHeader" name="requestHeader"/>
 	</wsdl:message>
+	
+	
+
 
 	<wsdl:message name="consultarInformacionGeneralResponseMsg">
 		<wsdl:part element="tns:consultarInformacionGeneralResponse" name="result"/>
 		<wsdl:part element="mf:responseHeader" name="responseHeader"/>
 	</wsdl:message>
+	
+	
+	<wsdl:message name="consultarRelacionGrupoEconomicoRequestMsg">
+		<wsdl:part element="tns:consultarRelacionGrupoEconomicoRequest" name="parameters"/>
+		<wsdl:part element="mf:requestHeader" name="requestHeader"/>
+	</wsdl:message>
+	
+	
+	<wsdl:message name="consultarRelacionGrupoEconomicoResponseMsg">
+		<wsdl:part element="tns:consultarRelacionGrupoEconomicoResponse" name="parameters"/>
+		<wsdl:part element="mf:requestHeader" name="requestHeader"/>
+	</wsdl:message>
+	
+	
 	<wsdl:message name="consultarInformacionFinancieraRequestMsg">
 		<wsdl:part element="tns:consultarInformacionFinanciera" name="parameters"/>
 		<wsdl:part element="mf:requestHeader" name="requestHeader"/>
