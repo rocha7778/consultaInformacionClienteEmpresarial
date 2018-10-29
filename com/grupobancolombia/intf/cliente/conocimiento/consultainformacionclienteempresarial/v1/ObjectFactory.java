@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.8-b130911.1802 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2018.10.29 a las 04:31:01 PM COT 
+// Generado el: 2018.10.29 a las 04:54:51 PM COT 
 //
 
 
@@ -86,11 +86,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ConsultarRelacionGrupoEconomicoResponse }
+     * Create an instance of {@link RelacionGrupoEconomicos }
      * 
      */
-    public ConsultarRelacionGrupoEconomicoResponse createConsultarRelacionGrupoEconomicoResponse() {
-        return new ConsultarRelacionGrupoEconomicoResponse();
+    public RelacionGrupoEconomicos createRelacionGrupoEconomicos() {
+        return new RelacionGrupoEconomicos();
     }
 
     /**
@@ -318,6 +318,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ConsultarRelacionGrupoEconomicoResponse }
+     * 
+     */
+    public ConsultarRelacionGrupoEconomicoResponse createConsultarRelacionGrupoEconomicoResponse() {
+        return new ConsultarRelacionGrupoEconomicoResponse();
+    }
+
+    /**
      * Create an instance of {@link OrigenesDeRecursos }
      * 
      */
@@ -455,12 +463,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConsultarRelacionGrupoEconomicoResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link RelacionGrupoEconomicos }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://grupobancolombia.com/intf/Cliente/Conocimiento/ConsultaInformacionClienteEmpresarial/V1.0", name = "consultarRelacionGrupoEconomicoResponse")
-    public JAXBElement<ConsultarRelacionGrupoEconomicoResponse> createConsultarRelacionGrupoEconomicoResponse(ConsultarRelacionGrupoEconomicoResponse value) {
-        return new JAXBElement<ConsultarRelacionGrupoEconomicoResponse>(_ConsultarRelacionGrupoEconomicoResponse_QNAME, ConsultarRelacionGrupoEconomicoResponse.class, null, value);
+    public JAXBElement<RelacionGrupoEconomicos> createConsultarRelacionGrupoEconomicoResponse(RelacionGrupoEconomicos value) {
+        return new JAXBElement<RelacionGrupoEconomicos>(_ConsultarRelacionGrupoEconomicoResponse_QNAME, RelacionGrupoEconomicos.class, null, value);
     }
 
     /**

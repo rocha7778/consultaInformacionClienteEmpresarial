@@ -12,20 +12,21 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para LineasNegocioGerenteType complex type.
+ * <p>Clase Java para RelacionGrupoEconomicos complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="LineasNegocioGerenteType">
+ * &lt;complexType name="RelacionGrupoEconomicos">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="lineaNegocioGerente" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="accionista" type="{http://grupobancolombia.com/intf/Cliente/Conocimiento/ConsultaInformacionClienteEmpresarial/V1.0}ConsultarRelacionGrupoEconomicoResponse" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,40 +36,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LineasNegocioGerenteType", propOrder = {
-    "lineaNegocioGerente"
+@XmlType(name = "RelacionGrupoEconomicos", propOrder = {
+    "accionista"
 })
-public class LineasNegocioGerenteType {
+public class RelacionGrupoEconomicos {
 
-    protected List<String> lineaNegocioGerente;
+    @XmlElement(required = true)
+    protected List<ConsultarRelacionGrupoEconomicoResponse> accionista;
 
     /**
-     * Gets the value of the lineaNegocioGerente property.
+     * Gets the value of the accionista property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the lineaNegocioGerente property.
+     * This is why there is not a <CODE>set</CODE> method for the accionista property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getLineaNegocioGerente().add(newItem);
+     *    getAccionista().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link String }
+     * {@link ConsultarRelacionGrupoEconomicoResponse }
      * 
      * 
      */
-    public List<String> getLineaNegocioGerente() {
-        if (lineaNegocioGerente == null) {
-            lineaNegocioGerente = new ArrayList<String>();
+    public List<ConsultarRelacionGrupoEconomicoResponse> getAccionista() {
+        if (accionista == null) {
+            accionista = new ArrayList<ConsultarRelacionGrupoEconomicoResponse>();
         }
-        return this.lineaNegocioGerente;
+        return this.accionista;
     }
 
 }

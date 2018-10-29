@@ -12,7 +12,7 @@
 	<xsd:element ibmSchExtn:docRoot="true" name="consultarRelacionGrupoEconomicoRequest" type="tns:ConsultarRelacionGrupoEconomicoRequest">
 	</xsd:element>
 	
-	<xsd:element ibmSchExtn:docRoot="true" name="consultarRelacionGrupoEconomicoResponse" type="tns:ConsultarRelacionGrupoEconomicoResponse">
+	<xsd:element ibmSchExtn:docRoot="true" name="consultarRelacionGrupoEconomicoResponse" type="tns:RelacionGrupoEconomicos">
 	</xsd:element>
 	
 	
@@ -78,6 +78,13 @@
 			<xsd:element name="identificacionCliente" type="tns:ConsultarRelacionGrupoEconomicoRequest" minOccurs="1" maxOccurs="1"></xsd:element>			
 			<xsd:element name="nombreEmpresa" type="xsd:string"  maxOccurs="1" minOccurs="1"	 />
 			<xsd:element name="estado" type="xsd:boolean"	minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	
+	<xsd:complexType name="RelacionGrupoEconomicos">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="1" name="relacionesGrupoEconomico" type="tns:ConsultarRelacionGrupoEconomicoResponse"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	
@@ -349,9 +356,6 @@
 	<xsd:complexType name="AccionistasClienteEmpresarial">
 		<xsd:sequence>
 			<xsd:element maxOccurs="unbounded" minOccurs="1" name="accionista" type="tns:AccionistaClienteEmpresarial"/>
-
-
-
 
 		</xsd:sequence>
 	</xsd:complexType>
