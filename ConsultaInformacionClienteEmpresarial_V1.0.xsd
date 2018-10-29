@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Bancololombia - Gerencia Desarrollo Servicios de Integracion - 31/05/2018 - Generado por: genaro-vcsoft  --><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://grupobancolombia.com/intf/Cliente/Conocimiento/ConsultaInformacionClienteEmpresarial/V1.0" xmlns:bons0="http://grupobancolombia.com/ents/common/GenericException/V2.0" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:tns="http://grupobancolombia.com/intf/Cliente/Conocimiento/ConsultaInformacionClienteEmpresarial/V1.0">
+
+	<!-- Inicio Importaciones -->
+	<xsd:import namespace="http://grupobancolombia.com/ents/common/GenericException/V2.0" schemaLocation="common-core-GenericException-V2.xsd">
+	</xsd:import>
+	<!-- Fin Importaciones -->
+	
+	<!--Inicio Operaciones)-->
+	<xsd:element ibmSchExtn:docRoot="true" name="consultarInformacionGeneral" type="tns:ConsultarInformacionGeneral">
+	</xsd:element>
+
+	<xsd:element ibmSchExtn:docRoot="true" name="consultarInformacionGeneralResponse" type="tns:ConsultarInformacionGeneralResponse">
+	</xsd:element>
+	
+	<xsd:element ibmSchExtn:docRoot="true" name="consultarInformacionFinanciera" type="tns:ConsultarInformacionFinanciera">
+	</xsd:element>
+
+	<xsd:element ibmSchExtn:docRoot="true" name="consultarInformacionFinancieraResponse" type="tns:ConsultarInformacionFinancieraResponse">
+	</xsd:element>
+	
+	<xsd:element ibmSchExtn:docRoot="true" name="consultarInformacionAccionistas" type="tns:ConsultarInformacionAccionistas">
+	</xsd:element>
+
+	<xsd:element ibmSchExtn:docRoot="true" name="consultarInformacionAccionistasResponse" type="tns:ConsultarInformacionAccionistasResponse">
+	</xsd:element>
+	
+	<xsd:element ibmSchExtn:docRoot="true" name="consultarInformacionContactos" type="tns:ConsultarInformacionContactos">
+	</xsd:element>
+
+	<xsd:element ibmSchExtn:docRoot="true" name="consultarInformacionContactosResponse" type="tns:ConsultarInformacionContactosResponse">
+	</xsd:element>
+	
+	<xsd:element ibmSchExtn:docRoot="true" name="consultarInformacionMiembrosJunta" type="tns:ConsultarInformacionMiembrosJunta">
+	</xsd:element>
+
+	<xsd:element ibmSchExtn:docRoot="true" name="consultarInformacionMiembrosJuntaResponse" type="tns:ConsultarInformacionMiembrosJuntaResponse">
+	</xsd:element>
+	
+	<!--Fin Operaciones)-->
+
+	<!-- Inicio Excepciones -->
+	<xsd:element ibmSchExtn:docRoot="true" name="systemException" type="tns:SystemException">
+	</xsd:element>
+	
+	<xsd:element ibmSchExtn:docRoot="true" name="businessException" type="tns:BusinessException">
+	</xsd:element>
+	
+	<!-- Fin Excepciones -->
+	
+	<!-- Inicio tipos complejos -->
+	
+	<!--Inicio Tipos Complejos Operaciones-->
+	<xsd:complexType name="ConsultarInformacionGeneral">
+		<xsd:sequence>
+
+			<xsd:element maxOccurs="1" minOccurs="1" name="identificacionCliente" type="tns:DatosIdentificacion"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ConsultarInformacionGeneralResponse">
+		<xsd:sequence>
+
+			<xsd:element maxOccurs="1" minOccurs="0"
+				name="nombreCliente" type="xsd:string" />
+
+			<xsd:element maxOccurs="1" minOccurs="1"
+				name="fechaModificacion" type="xsd:date">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1"
+				name="fechaUltimaModificacion" type="xsd:date">
+			</xsd:element>
+			<xsd:element name="centroDeDecision" type="xsd:string"
+				minOccurs="1" maxOccurs="1">
+			</xsd:element>
+			<xsd:element name="gerenciado" type="xsd:string"
+				minOccurs="1" maxOccurs="1">
+			</xsd:element>
+			<xsd:element name="justificacionNoGerenciado"
+				type="xsd:string" minOccurs="1" maxOccurs="1">
+			</xsd:element>
+			<xsd:element name="tipoCliente" type="xsd:string"
+				minOccurs="1" maxOccurs="1">
+			</xsd:element>
+			<xsd:element name="tipologiaCliente" type="xsd:string"
+				minOccurs="1" maxOccurs="1" />
+			<xsd:element name="estadoVinculacion" type="xsd:string"
+				minOccurs="1" maxOccurs="1" />
+			<xsd:element name="ciiu" type="xsd:string" minOccurs="1"
+				maxOccurs="1" />
+			<xsd:element name="subciiu" type="xsd:int" minOccurs="1"
+				maxOccurs="1" />
+			<xsd:element name="sectorEconomico" type="xsd:string"
+				minOccurs="1" maxOccurs="1" />
+			<xsd:element name="subSectorEconomico" type="xsd:string"
+				minOccurs="1" maxOccurs="1" />
+
+			<xsd:element name="estrategiaSectorial" type="xsd:string"
+				minOccurs="1" maxOccurs="1" />
+			<xsd:element name="estadoCliente" type="xsd:string"
+				minOccurs="1" maxOccurs="1" />
+			<xsd:element name="grupoEconomico" type="xsd:string"
+				minOccurs="1" maxOccurs="1" />
+			<xsd:element name="calificacionInterna" type="xsd:string"
+				minOccurs="0" maxOccurs="1" />
+			<xsd:element name="rolNegocio" type="xsd:string"
+				minOccurs="1" maxOccurs="1" />
+			<xsd:element name="segmento" type="xsd:string" minOccurs="1"
+				maxOccurs="1" />
+			<xsd:element name="subSegmento" type="xsd:string"
+				minOccurs="1" maxOccurs="1" />
+			<xsd:element name="extractoVirtual" type="xsd:string"
+				minOccurs="1" maxOccurs="1" />
+			<xsd:element name="identificadorCelula" type="xsd:int"
+				minOccurs="1" maxOccurs="1" />
+			<xsd:element name="grupoRiesgo" type="xsd:string"
+				minOccurs="0" maxOccurs="1" />
+			<xsd:element name="certificadoNoAccionistas"
+				type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="contextoCliente" type="xsd:string"
+				minOccurs="0" maxOccurs="1" />
+			<xsd:element name="lineasNegocio" type="tns:LineasDeNegocio"
+				minOccurs="0" maxOccurs="1" />
+
+			<xsd:element name="reporteCostosVirtual" type="xsd:string"
+				minOccurs="1" maxOccurs="1" />
+			<xsd:element maxOccurs="1" minOccurs="1"
+				name="informacionDireccion" type="tns:DatosDireccion">
+			</xsd:element>
+
+
+
+
+
+			<xsd:element name="numeroTelefonico" type="xsd:string"
+				minOccurs="1" maxOccurs="1">
+			</xsd:element>
+			<xsd:element name="informacionGerente" type="tns:InformacionGerenteType" minOccurs="1" maxOccurs="1"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ConsultarInformacionFinanciera">
+		<xsd:sequence>
+
+			<xsd:element maxOccurs="1" minOccurs="1" name="identificacionCliente" type="tns:DatosIdentificacion"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ConsultarInformacionFinancieraResponse">
+		<xsd:sequence>
+
+			<xsd:element maxOccurs="1" minOccurs="1" name="informacionFinanciera" type="tns:InformacionFinancieraClienteEmpresarial"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ConsultarInformacionAccionistas">
+		<xsd:sequence>
+
+            <xsd:element name="identificacionCliente" type="tns:DatosIdentificacion"/>
+
+
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ConsultarInformacionAccionistasResponse">
+		<xsd:sequence>
+
+			<xsd:element maxOccurs="1" minOccurs="1" name="accionistas" type="tns:AccionistasClienteEmpresarial"/>
+
+
+
+
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ConsultarInformacionContactos">
+		<xsd:sequence>
+
+			<xsd:element name="identificacionCliente" type="tns:DatosIdentificacion"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ConsultarInformacionContactosResponse">
+		<xsd:sequence>
+
+			<xsd:element maxOccurs="1" minOccurs="1" name="contactos" type="tns:ContactosClienteEmpresarial"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ConsultarInformacionMiembrosJunta">
+		<xsd:sequence>
+
+			<xsd:element name="identificacionMiembrosJunta" type="tns:DatosIdentificacion">
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ConsultarInformacionMiembrosJuntaResponse">
+		<xsd:sequence>
+
+
+
+
+			<xsd:element maxOccurs="1" minOccurs="1" name="miembrosDeJunta" type="tns:MiembrosDeJuntaClienteEmpresarial">
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!--Fin Tipos Complejos Operaciones-->
+
+
+	<!--Inicio Tipos Complejos Excepciones-->
+	<xsd:complexType name="SystemException">
+		<xsd:sequence>
+			<xsd:element name="genericException" type="bons0:GenericException">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+		<xsd:complexType name="BusinessException">
+		<xsd:sequence>
+			<xsd:element name="genericException" type="bons0:GenericException">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!--Fin Tipos Complejos Excepciones-->
+	
+	<!-- Inicio tipos complejos -->
+
+
+	<xsd:complexType name="DatosIdentificacion">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1" name="tipoIdentificacion">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:minLength value="1"/>
+						<xsd:maxLength value="50"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="identificacion">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:minLength value="1"/>
+						<xsd:maxLength value="50"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="TipoPersona">
+		<xsd:sequence>
+			<xsd:element name="personaNatural" type="xsd:string"/>
+			<xsd:element name="personaJuridica" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="NombreCompleto">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1" name="primerApellido" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="primerNombre" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="segundoApellido" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="segundoNombre" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="DatosDireccion">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1" name="direccion" type="xsd:string">
+			</xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="tipoDireccion" type="xsd:string" />
+            <xsd:element maxOccurs="1" minOccurs="1" name="ciudad" type="xsd:string">
+			</xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="pais" type="xsd:string">
+			</xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="departamento" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="barrio" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="codigoPostal" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="InformacionAccionista">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="0" name="paisResidenciaFiscal" type="xsd:string"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="tipoPersona" type="xsd:string"/>
+            <xsd:element maxOccurs="1" minOccurs="0" name="genero" type="xsd:string">
+			</xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="razonSocial" type="xsd:string"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="tipoAccionista" type="xsd:string"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="porcentajeParticipacion">
+
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:pattern value="[\-+]?[0-9]{1,17}[.][0-9]{2}">
+						</xsd:pattern>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="identificacionTributaria" type="xsd:string"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="estado" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="MiembroDeJunta">
+		<xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" name="identificacionMiembroJunta" type="tns:DatosIdentificacion">
+			</xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="nombreCompleto" type="tns:NombreCompleto">
+			</xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="0" name="observaciones" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="AccionistasClienteEmpresarial">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="1" name="accionista" type="tns:AccionistaClienteEmpresarial"/>
+
+
+
+
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="AccionistaClienteEmpresarial">
+		<xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" name="identificacionAccionista" type="tns:DatosIdentificacion">
+			</xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="nombreAccionista" type="tns:NombreCompleto">
+			</xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="0" name="datosDireccion" type="tns:DatosDireccion">
+			</xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="informacionAccionista" type="tns:InformacionAccionista">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ContactosClienteEmpresarial">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="1" name="contacto" type="tns:ContactoClienteEmpresarial"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ContactoClienteEmpresarial">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1" name="identificacionContacto" type="tns:DatosIdentificacion">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="informacionContacto" type="tns:InformacionContacto"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="InformacionContacto">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1"
+				name="nombreContacto" type="tns:NombreCompleto">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="titulo"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0"
+				name="fechaNacimiento" type="xsd:date">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="genero"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0"
+				name="direccionContacto" type="tns:DatosDireccion">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0"
+				name="cargoContacto" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="email"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element maxOccurs="1" minOccurs="1"
+				name="informacionTelefono" type="tns:InformacionTelefono">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="estiloSocial"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="tipoContacto"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="funciones"
+				type="tns:FuncionesContacto">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0"
+				name="lineasDeNegocio" type="tns:LineasDeNegocio" />
+			<xsd:element name="estado" type="xsd:string" minOccurs="1" maxOccurs="1"></xsd:element>
+			<xsd:element name="area" type="xsd:string" minOccurs="1" maxOccurs="1"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="InformacionTelefono">
+		<xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" name="numeroTelefonico" type="xsd:string" />
+            <xsd:element maxOccurs="1" minOccurs="0" name="extension" type="xsd:string" />
+            <xsd:element maxOccurs="1" minOccurs="0" name="numeroCelular" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="FuncionesContacto">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="funcion" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="LineasDeNegocio">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="1" name="lineaNegocio" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+    <xsd:complexType name="MiembroJuntaClienteEmpresarial"/>
+
+    <xsd:complexType name="MiembrosDeJuntaClienteEmpresarial">
+    	<xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="1" name="miembroDeJunta" type="tns:MiembroDeJunta">
+			</xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="InformacionFinancieraClienteEmpresarial">
+    	<xsd:sequence>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="ventasAnuales">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:decimal">
+    					<xsd:pattern value="[\-+]?[0-9]{1,17}[.][0-9]{2}">
+    					</xsd:pattern>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="activos">
+
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:decimal">
+    					<xsd:pattern value="[\-+]?[0-9]{1,17}[.][0-9]{2}">
+    					</xsd:pattern>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="egresos">
+
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:decimal">
+    					<xsd:pattern value="[\-+]?[0-9]{1,17}[.][0-9]{2}">
+    					</xsd:pattern>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="pasivos">
+
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:decimal">
+    					<xsd:pattern value="[\-+]?[0-9]{1,17}[.][0-9]{2}">
+    					</xsd:pattern>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="ingresosNoOperacionales">
+
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:decimal">
+    					<xsd:pattern value="[\-+]?[0-9]{1,17}[.][0-9]{2}">
+    					</xsd:pattern>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="ingresosOperacionales">
+
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:decimal">
+    					<xsd:pattern value="[\-+]?[0-9]{1,17}[.][0-9]{2}">
+    					</xsd:pattern>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="fechaActualizacionVentas" type="xsd:date">
+    		</xsd:element>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="naturalezaTributaria" type="xsd:string"/>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="origenesDeBienes" type="tns:OrigenesDeBienes">
+    		</xsd:element>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="origenesDeRecursos" type="tns:OrigenesDeRecursos">
+    		</xsd:element>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="otroOrigenDeBienes" type="xsd:string"/>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="otroOrigenDeRecursos" type="xsd:string"/>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="paisOrigenFondos" type="xsd:string"/>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="ciudadOrigenFondos" type="xsd:string"/>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="montoOperacionesNoInternacionales" type="xsd:string">
+    		</xsd:element>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="operacionesMonedaExtranjera" type="xsd:string">
+    		</xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="0" name="otraOperacionMonedaExtranjera" type="xsd:string">
+    		</xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="0" name="operacionesMonedaExt" type="tns:OperacionesMonedaExt"/>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="lineasDeNegocio" type="tns:LineasDeNegocio">
+    		</xsd:element>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="productos" type="tns:ProductosClienteEmpresarial">
+    		</xsd:element>
+
+
+
+
+
+
+
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="ProductosClienteEmpresarial">
+    	<xsd:sequence>
+    		<xsd:element maxOccurs="unbounded" minOccurs="1" name="producto" type="tns:ProductoClienteEmpresarial"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="ProductoClienteEmpresarial">
+    	<xsd:sequence>
+    		<xsd:element maxOccurs="1" minOccurs="1" name="nombreProducto" type="xsd:string"/>
+    		<xsd:element maxOccurs="1" minOccurs="1" name="tipoProducto" type="xsd:string"/>
+    		<xsd:element maxOccurs="1" minOccurs="1" name="numeroProducto" type="xsd:string"/>
+    		<xsd:element maxOccurs="1" minOccurs="1" name="montoProducto">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:decimal">
+
+
+    					<xsd:pattern value="[\-+]?[0-9]{1,20}[.][0-9]{0,5}">
+    					</xsd:pattern>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="moneda" type="xsd:string"/>
+    		<xsd:element maxOccurs="1" minOccurs="0" name="direccionProducto" type="tns:DatosDireccion"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="OrigenesDeBienes">
+    	<xsd:sequence>
+    		<xsd:element maxOccurs="unbounded" minOccurs="1" name="origenDeBien" type="xsd:string"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="BieneoRecurso">
+    	<xsd:sequence>
+    		<xsd:element maxOccurs="unbounded" minOccurs="1" name="bienoRecurso" type="xsd:string"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="OperacionesMonedaExt">
+    	<xsd:sequence>
+    		<xsd:element maxOccurs="unbounded" minOccurs="1" name="operacionMonedaExtranjera" type="xsd:string"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="OrigenesDeRecursos">
+    	<xsd:sequence>
+    		<xsd:element name="origenDeRecurso" type="xsd:string" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="InformacionGerenteType">
+    	<xsd:sequence>
+    		<xsd:element name="nombreGerente" type="xsd:string"
+    			minOccurs="1" maxOccurs="1">
+    		</xsd:element>
+    		<xsd:element name="lineasNegocioGerente"
+    			type="tns:LineasNegocioGerenteType" minOccurs="0"
+    			maxOccurs="1">
+    		</xsd:element>
+    		<xsd:element name="cargoGerente" type="xsd:string"
+    			minOccurs="1" maxOccurs="1">
+    		</xsd:element>
+    		<xsd:element name="informacionAsistenteGerente" type="tns:InformacionAsistenteGerenteType" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="LineasNegocioGerenteType">
+    	<xsd:sequence>
+    		<xsd:element name="lineaNegocioGerente" type="xsd:string" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="InformacionAsistenteGerenteType">
+    	<xsd:sequence>
+    		<xsd:element name="nombreAsistente" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+    		<xsd:element name="cargoAsistente" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

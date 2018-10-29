@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Bancololombia - Gerencia Desarrollo Servicios de Integracion - 31/05/2018 - Generado por: genaro-vcsoft  --><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="ConsultaInformacionClienteEmpresarial" targetNamespace="http://grupobancolombia.com/intf/Cliente/Conocimiento/ConsultaInformacionClienteEmpresarial/V1.0" xmlns:mf="http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://grupobancolombia.com/intf/Cliente/Conocimiento/ConsultaInformacionClienteEmpresarial/V1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true"/>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+	
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://grupobancolombia.com/intf/Cliente/Conocimiento/ConsultaInformacionClienteEmpresarial/V1.0">
+<xsd:include schemaLocation="ConsultaInformacionClienteEmpresarial_V1.0.xsd"/>
+
+<xsd:import namespace="http://grupobancolombia.com/ents/SOI/MessageFormat/V2.1" schemaLocation="soi-core-MessageFormat-V2.1.xsd"/>
+</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="consultarInformacionGeneralRequestMsg">
+		<wsdl:part element="tns:consultarInformacionGeneral" name="parameters"/>
+		<wsdl:part element="mf:requestHeader" name="requestHeader"/>
+	</wsdl:message>
+
+	<wsdl:message name="consultarInformacionGeneralResponseMsg">
+		<wsdl:part element="tns:consultarInformacionGeneralResponse" name="result"/>
+		<wsdl:part element="mf:responseHeader" name="responseHeader"/>
+	</wsdl:message>
+	<wsdl:message name="consultarInformacionFinancieraRequestMsg">
+		<wsdl:part element="tns:consultarInformacionFinanciera" name="parameters"/>
+		<wsdl:part element="mf:requestHeader" name="requestHeader"/>
+	</wsdl:message>
+
+	<wsdl:message name="consultarInformacionFinancieraResponseMsg">
+		<wsdl:part element="tns:consultarInformacionFinancieraResponse" name="result"/>
+		<wsdl:part element="mf:responseHeader" name="responseHeader"/>
+	</wsdl:message>
+	<wsdl:message name="consultarInformacionAccionistasRequestMsg">
+		<wsdl:part element="tns:consultarInformacionAccionistas" name="parameters"/>
+		<wsdl:part element="mf:requestHeader" name="requestHeader"/>
+	</wsdl:message>
+
+	<wsdl:message name="consultarInformacionAccionistasResponseMsg">
+		<wsdl:part element="tns:consultarInformacionAccionistasResponse" name="result"/>
+		<wsdl:part element="mf:responseHeader" name="responseHeader"/>
+	</wsdl:message>
+	<wsdl:message name="consultarInformacionContactosRequestMsg">
+		<wsdl:part element="tns:consultarInformacionContactos" name="parameters"/>
+		<wsdl:part element="mf:requestHeader" name="requestHeader"/>
+	</wsdl:message>
+
+	<wsdl:message name="consultarInformacionContactosResponseMsg">
+		<wsdl:part element="tns:consultarInformacionContactosResponse" name="result"/>
+		<wsdl:part element="mf:responseHeader" name="responseHeader"/>
+	</wsdl:message>
+	<wsdl:message name="consultarInformacionMiembrosJuntaRequestMsg">
+		<wsdl:part element="tns:consultarInformacionMiembrosJunta" name="parameters"/>
+		<wsdl:part element="mf:requestHeader" name="requestHeader"/>
+	</wsdl:message>
+
+	<wsdl:message name="consultarInformacionMiembrosJuntaResponseMsg">
+		<wsdl:part element="tns:consultarInformacionMiembrosJuntaResponse" name="result"/>
+		<wsdl:part element="mf:responseHeader" name="responseHeader"/>
+	</wsdl:message>
+	
+	<wsdl:message name="systemExceptionMsg">
+		<wsdl:part element="tns:systemException" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="businessExceptionMsg">
+		<wsdl:part element="tns:businessException" name="parameters"/>
+	</wsdl:message>
+	
+
+
+
+	<wsdl:portType name="ConsultaInformacionClienteEmpresarial">
+
+
+		<!--por cada operación)-->
+		<wsdl:operation name="consultarInformacionGeneral">
+		
+			<wsdl:input message="tns:consultarInformacionGeneralRequestMsg" name="consultarInformacionGeneralRequest"/>
+		
+			<wsdl:output message="tns:consultarInformacionGeneralResponseMsg" name="consultarInformacionGeneralResponse"/>
+			
+			<wsdl:fault message="tns:systemExceptionMsg" name="systemException"/>
+			<wsdl:fault message="tns:businessExceptionMsg" name="businessException"/>
+				
+		</wsdl:operation>
+		
+		<wsdl:operation name="consultarInformacionFinanciera">
+		
+			<wsdl:input message="tns:consultarInformacionFinancieraRequestMsg" name="consultarInformacionFinancieraRequest"/>
+		
+			<wsdl:output message="tns:consultarInformacionFinancieraResponseMsg" name="consultarInformacionFinancieraResponse"/>
+			
+			<wsdl:fault message="tns:systemExceptionMsg" name="systemException"/>
+			<wsdl:fault message="tns:businessExceptionMsg" name="businessException"/>
+				
+		</wsdl:operation>
+		
+		<wsdl:operation name="consultarInformacionAccionistas">
+		
+			<wsdl:input message="tns:consultarInformacionAccionistasRequestMsg" name="consultarInformacionAccionistasRequest"/>
+		
+			<wsdl:output message="tns:consultarInformacionAccionistasResponseMsg" name="consultarInformacionAccionistasResponse"/>
+			
+			<wsdl:fault message="tns:systemExceptionMsg" name="systemException"/>
+			<wsdl:fault message="tns:businessExceptionMsg" name="businessException"/>
+				
+		</wsdl:operation>
+		
+		<wsdl:operation name="consultarInformacionContactos">
+		
+			<wsdl:input message="tns:consultarInformacionContactosRequestMsg" name="consultarInformacionContactosRequest"/>
+		
+			<wsdl:output message="tns:consultarInformacionContactosResponseMsg" name="consultarInformacionContactosResponse"/>
+			
+			<wsdl:fault message="tns:systemExceptionMsg" name="systemException"/>
+			<wsdl:fault message="tns:businessExceptionMsg" name="businessException"/>
+				
+		</wsdl:operation>
+		
+		<wsdl:operation name="consultarInformacionMiembrosJunta">
+		
+			<wsdl:input message="tns:consultarInformacionMiembrosJuntaRequestMsg" name="consultarInformacionMiembrosJuntaRequest"/>
+		
+			<wsdl:output message="tns:consultarInformacionMiembrosJuntaResponseMsg" name="consultarInformacionMiembrosJuntaResponse"/>
+			
+			<wsdl:fault message="tns:systemExceptionMsg" name="systemException"/>
+			<wsdl:fault message="tns:businessExceptionMsg" name="businessException"/>
+				
+		</wsdl:operation>
+		
+		<!--por cada operación)-->
+
+	</wsdl:portType>
+
+
+</wsdl:definitions>
