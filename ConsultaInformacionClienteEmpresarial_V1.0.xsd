@@ -56,6 +56,14 @@
 			<xsd:element maxOccurs="1" minOccurs="1" name="identificacionCliente" type="tns:DatosIdentificacion"/>
 		</xsd:sequence>
 	</xsd:complexType>
+	
+	
+	<xsd:complexType name="ConsultarRelacionGrupoEconomico">
+		<xsd:sequence>
+
+			<xsd:element maxOccurs="1" minOccurs="1" name="identificacionCliente" type="tns:DatosIdentificacion"/>
+		</xsd:sequence>
+	</xsd:complexType>
 
 	<xsd:complexType name="ConsultarInformacionGeneralResponse">
 		<xsd:sequence>
